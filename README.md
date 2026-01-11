@@ -65,9 +65,9 @@ IMPROVEMENT TIPS:
 ## Project Structure
 
 PasswordChecker/
-│
-├── password_checker.py
-├── README.md
+
+ - password_checker.py
+ - README.md
 
 ---
 
