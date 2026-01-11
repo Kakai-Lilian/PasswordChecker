@@ -1,87 +1,84 @@
-# Password Strength Checker (Python)
+# Password Strength Checker (CLI)
 
 ## Overview
-This project is a simple Python-based Password Strength Checker developed for MediSure Health Services as part of a cybersecurity improvement initiative. The script evaluates the strength of a user-entered password based on commonly accepted security criteria and provides clear, actionable tips for improvement.
 
-The program supports:
-- Length checking  
-- Lowercase, uppercase, digit, and symbol detection  
-- Weak / OK / Strong rating  
-- Helpful security tips  
-- Continuous testing in a loop  
-- Graceful handling of empty inputs  
-- Exit command for convenience  
+This project is a command-line password strength checker built with Python.  
+It helps users evaluate how secure a password is using common security best practices
+such as length, character variety, and pattern detection.
 
-This tool is intended for learning and demonstration purposes only. It should not be used to test real user passwords.
+The tool provides:
+- A numeric security score
+- A visual strength bar
+- Clear improvement tips
+- Input validation for better user experience
+
+This project was built as part of my learning and practice in Python, security
+fundamentals, and clean CLI application design.
 
 ---
 
 ## Features
-- ✔ Uses only Python built-in functions (no external libraries required)  
-- ✔ Simple scoring system (0–5 points)  
-- ✔ Provides clear strength ratings (Weak / OK / Strong)  
-- ✔ Displays up to 2 improvement tips  
-- ✔ Allows repeated testing without restarting  
-- ✔ Exits safely when the user types `"exit"`  
-- ✔ Clean, modular, and beginner-friendly code  
 
----
-
-## Requirements
-- Python 3.10 or later  
-- VS Code (recommended, but any editor works)  
-
-No third-party modules are required.
-
----
-
-## How to Run the Program
-
-1. Verify Python is installed:
-
-python --version
-
-2. Save the script as:
-
-password_checker.py
-
-3. Open a terminal in the script's folder.
-
-4. Run the program:
-python password_checker.py
-
-or:
-python3 password_checker.py
-
-
-5. When prompted:
-- Enter a password to test  
-- View the strength rating  
-- Read suggestions to improve  
-- Type **exit** to quit the program  
+- Validates password strength based on:
+  - Minimum length
+  - Lowercase letters
+  - Uppercase letters
+  - Numbers
+  - Special characters
+- Detects common weak patterns:
+  - Common passwords (e.g. `password`, `123456`)
+  - Sequential numbers (e.g. `123`)
+  - Repeated characters (e.g. `aaa`)
+- Displays:
+  - Score out of 5
+  - Visual strength bar (`[#----]`)
+  - Clear improvement tips
+- Handles invalid input gracefully:
+  - Empty input
+  - Overly long input
+  - Accidental file path pastes
 
 ---
 
 ## Example Output
-Enter your password: Lily@1234
 
-Password Rating: Strong
-Great job! Your password meets all security requirements.
+Enter password to check (or 'exit' to quit): lily@123
 
-Type another password or type 'exit' to quit.
+ANALYSIS RESULTS:
+Security Score: 4/5
+Rating: [####-] ⭐⭐⭐⭐ [STRONG]
+
+IMPROVEMENT TIPS:
+[!] Add uppercase letters (A-Z)
+[!] Avoid sequential numbers (e.g., '123')
 
 ---
 
-## File Structure
+## Technologies Used
+
+- Python 3
+- Python Standard Library (`string`)
+- Command Line Interface (CLI)
+
+---
+
+## Project Structure
+
 PasswordChecker/
- -password_checker.py # Main program
- -README.md # Instructions and documentation
- 
+│
+├── password_checker.py
+├── README.md
+
 ---
 
-## Notes
-- This script does not store or transmit any passwords.  
-- It is designed for educational use to demonstrate secure coding practices.  
-- The code follows clean, modular design to improve readability and maintainability.
+## How to Run
+
+1. Ensure Python 3 is installed
+2. Open Command Prompt or Terminal
+3. Navigate to the project folder
+4. Run:
+
+```bash
+python password_checker.py
 
 
