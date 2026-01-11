@@ -1,8 +1,7 @@
 import string
 
-# =========================
+
 # Configuration
-# =========================
 MIN_LENGTH = 8
 MAX_LENGTH = 64
 REQUIREMENTS = {
@@ -15,9 +14,7 @@ REQUIREMENTS = {
 
 COMMON_PASSWORDS = {"password", "123456", "qwerty", "letmein", "admin"}
 
-# =========================
-# Functions
-# =========================
+
 
 def get_password():
     """Prompt the user for input and handle exit or empty input gracefully."""
@@ -128,7 +125,7 @@ def get_rating(score):
 def main():
     """Main CLI loop for password strength testing."""
     # Sleek title
-    print("\n=== ISP NETWORK SECURITY TOOL ===\n")
+    print("\n PASSWORD SECURITY TOOL \n")
 
     while True:
         password = get_password()
@@ -147,7 +144,7 @@ def main():
         rating = get_rating(score)
 
         # Display results with clean spacing
-        print("\n--- Analysis Results ---")
+        print("\n  Results Analysis ")
         print(f"Security Score: {score}/5")
         print(f"Rating: {rating}")
 
